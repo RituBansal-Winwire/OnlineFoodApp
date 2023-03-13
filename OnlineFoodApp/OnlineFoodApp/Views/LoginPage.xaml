@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineFoodApp.Views.LoginPage"
+             BackgroundImageSource="image1.jpg">
+    <StackLayout Orientation="Vertical" Padding="30" Spacing="10">
+     
+        <Image HorizontalOptions="Center"  WidthRequest="150" Source="Login1.jpg"/>
+        <Frame BackgroundColor="#BF043055" CornerRadius="40">
+            <StackLayout  Spacing="20">
+                <Entry x:Name="UName" Text="{Binding UName}" Placeholder="User Name"   
+                           PlaceholderColor="White" HeightRequest="50"   FontSize="Large" 
+                           TextColor="White"/>
+                <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
+                           PlaceholderColor="White" HeightRequest="50"  FontSize="Large" 
+                           IsPassword="True"  
+                           TextColor="White"/>
+            </StackLayout>
+        </Frame>
+        <Button Command="{Binding SubmitCommand}" Text="Login" 
+                BackgroundColor="{StaticResource butonBackGroudColor}"
+                TextColor="{StaticResource buttonTextColor}"
+                CornerRadius="{StaticResource buttonRedisus}"
+                 FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    />
+        <Button Command="{Binding RegisterCommand}" Text="Register" 
+                BackgroundColor="{StaticResource butonBackGroudColor}"
+                TextColor="{StaticResource buttonTextColor}"
+                CornerRadius="{StaticResource buttonRedisus}"
+                FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    />
+    </StackLayout>
+</ContentPage>

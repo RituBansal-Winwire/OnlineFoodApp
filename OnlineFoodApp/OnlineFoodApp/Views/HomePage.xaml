@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineFoodApp.Views.HomePage" >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Restaurant" 
+                     Priority="0"  
+                     Order="Secondary"  
+                        Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem Text="Price"  Order="Secondary"></ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+
+        
+        <StackLayout>
+        <Image Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" Source="HamburgerMenu"/>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Tempting" TextColor="#fdc912"/>
+                    <Span Text=" Food" TextColor="#bf2103"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <SearchBar Placeholder="Search..." Text="{Binding searchText}" ></SearchBar>
+        <ListView x:Name="lstView" ItemsSource="{Binding Itemlist}">
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding displayName}" Detail="{Binding address}"  TextColor="#000066" DetailColor="#6699ff"  />
+                              
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+   </StackLayout>
+ 
+
+</ContentPage> 

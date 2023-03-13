@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineFoodApp.Views.RetaurantPage" BackgroundImageSource="background.jpg">
+    <StackLayout  Padding="5">
+        <Image Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" Source="HamburgerMenu"/>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Tempting" TextColor="#fdc912"/>
+                    <Span Text=" Food" TextColor="#bf2103"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Text="ID"></Label>
+        <StackLayout Padding="10" VerticalOptions="Center" Orientation="Horizontal" Spacing="70">
+            
+            <Entry Placeholder="Enter the Id    " Text="{Binding Id}" WidthRequest="250"></Entry>
+            <Button WidthRequest="70" HeightRequest="25"  FontSize="12" BackgroundColor="{StaticResource butonBackGroudColor}"
+                TextColor="{StaticResource buttonTextColor}"
+                 Text="Get" Command="{Binding GetCommand}"/>
+        </StackLayout>
+        <Label Text="Display Name"></Label>
+        <Entry Placeholder="Display Name" Text="{Binding DName}"></Entry>
+         <Label Text="Address"></Label>
+        <Editor Text="{Binding Address}"></Editor>
+        <Label Text="Price for Two"></Label>
+        <Entry Placeholder="Price for Two" Keyboard="Numeric" Text="{Binding Price}"></Entry>
+        <StackLayout Padding="10" VerticalOptions="Center" Orientation="Horizontal">
+            <Button  BackgroundColor="{StaticResource butonBackGroudColor}"
+                TextColor="{StaticResource buttonTextColor}"
+                CornerRadius="{StaticResource buttonRedisus}"  Text="Add" Command="{Binding AddCommand}"/>
+            <Button  BackgroundColor="{StaticResource butonBackGroudColor}"
+                TextColor="{StaticResource buttonTextColor}"
+                CornerRadius="{StaticResource buttonRedisus}" Text="Update" Command="{Binding UpdateCommand}"/>
+            <Button  BackgroundColor="{StaticResource butonBackGroudColor}"
+                TextColor="{StaticResource buttonTextColor}"
+                CornerRadius="{StaticResource buttonRedisus}" Text="Remove" Command="{Binding DeleteCommand}"/>
+           
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

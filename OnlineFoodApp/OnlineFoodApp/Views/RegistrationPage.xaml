@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineFoodApp.Views.RegistrationPage">
+    <StackLayout  Padding="10">
+        <StackLayout Orientation="Horizontal">
+            <Entry Placeholder="First Name" Text="{Binding FName}"></Entry>
+            <Entry Placeholder="Last Name" Text="{Binding LName}"></Entry>
+        </StackLayout>
+        <Entry Placeholder="Email" x:Name="Email" Text="{Binding Email}"></Entry>
+        <Entry Placeholder="User Name" x:Name="Usern" Text="{Binding Usern}"></Entry>
+        <Entry Placeholder="Password" x:Name="Pass" Text="{Binding Pass}" IsPassword="True"></Entry>
+        <Button Text="Register" Command="{Binding RegisterCommand}" BackgroundColor="{StaticResource butonBackGroudColor}"
+                TextColor="{StaticResource buttonTextColor}"
+                CornerRadius="{StaticResource buttonRedisus}"
+                 FontSize="Large" HorizontalOptions="FillAndExpand"  ></Button>
+        
+    </StackLayout>
+</ContentPage>  
